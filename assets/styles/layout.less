@@ -1,0 +1,130 @@
+@footer-height: 40px;
+@container-md-max-width: 1100px;
+
+[v-cloak] { display: none; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+[purpose='page-wrap'] {
+  height: 100%;
+  /* lesshint-disable */height: auto !important;/* lesshint-enable */
+  // ^^The above is to disable "importantRule" and "duplicateProperty" rules.
+  min-height: 100%;
+  position: relative;
+  padding-bottom: @footer-height;
+}
+
+[purpose='page-footer'] {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  height: @footer-height;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+
+body.detected-mobile {
+  // Above and beyond the media queries below, this selector (which relies on
+  // `parasails` automatically attaching this class, if appropriate) contains
+  // styles intended to be activated specifically when loaded from a recognized
+  // mobile device, regardless of viewport dimensions.  This includes tablet
+  // devices (like the iPad) as well as handset devices (like the iPhone).
+  // …
+}
+
+@media (max-width: 800px) {
+  [purpose='page-wrap'] {
+    padding-bottom: 75px;
+    [purpose='page-footer'] {
+      height: 75px;
+      [purpose='footer-copy'], [purpose='footer-nav'] {
+        width: 100%;
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  [purpose='page-wrap'] {
+    padding-bottom: 100px;
+    [purpose='page-footer'] {
+      height: 100px;
+    }
+  }
+}
+
+.navbar{
+  height:80px;
+}
+
+.logo{
+  height: 70px!important;
+}
+
+.n-m{
+  margin : 0
+}
+
+.input-search{
+    background-color: #333;
+    border: 1px solid #333;
+    left: -0px;
+    position: relative;
+    width: 980px!important;
+    height: 70px;
+    max-width: 1000px;
+    border-left: 1px solid #49505754;
+    border-right: 1px solid #49505754 ;
+    outline: none;
+    padding-left: 40px;
+    position: relative;
+    left: -13%;
+
+    &:focus{
+      background-color: #333;
+      border: 1px solid #333;
+      left: -0px;
+      position: relative;
+      width: 980px!important;
+      height: 70px;
+      max-width: 1000px;
+      border-left: 1px solid #49505754;
+      border-right: 1px solid #49505754 ;
+      outline: none;
+      box-shadow: none!important;
+      padding-left: 40px;
+      position: relative;
+      left: -13%;
+
+    }
+
+    &:active{
+      background-color: #333;
+      border: 1px solid #333;
+      left: -0px;
+      position: relative;
+      width: 980px!important;
+      height: 70px;
+      max-width: 1000px;
+      border-left: 1px solid #49505754;
+      border-right: 1px solid #49505754 ;
+      outline: none;
+      box-shadow: none!important;
+      padding-left: 40px;
+      position: relative;
+      left: -13%;
+    }
+}
+
+.bg-dark-2{
+  background-color: #333;
+}
+
+.hidden{
+  display: none;
+}
